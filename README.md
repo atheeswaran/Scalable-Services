@@ -16,7 +16,8 @@
 1. Create a Microservices based application with at least 3 microservices. Each service should be maintained as a separate code repository so that 
 it can be developed, deployed, and tested independently.
 
-![image](https://github.com/atheeswaran/Scalable-Services/assets/19812046/2d5ede7c-6c5f-49bc-996d-f7a1f81ab104)
+![image](https://github.com/atheeswaran/Scalable-Services/assets/19812046/2ad5b1e2-a7cd-4789-9a69-21bfebfbbf66)
+
 
 Description =>
 
