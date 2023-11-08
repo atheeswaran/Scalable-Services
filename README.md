@@ -4,6 +4,8 @@
 it can be developed, deployed, and tested independently.
 
 ![image](https://github.com/atheeswaran/Scalable-Services/assets/19812046/2d5ede7c-6c5f-49bc-996d-f7a1f81ab104)
+or
+![image](https://github.com/atheeswaran/Scalable-Services/assets/19812046/7d744fbc-0670-4f83-b280-8fede23b18a6)
 
 Description =>
 
