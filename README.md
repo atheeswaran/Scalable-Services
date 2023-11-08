@@ -34,8 +34,11 @@ Description =>
 
 
 6. Run a minikube cluster on your local machine and explore various options in this. Try deployment of your application on this.
-![image](https://github.com/atheeswaran/Scalable-Services/assets/19812046/f9878ff0-8110-4a81-bcfa-a4ac253405dc)
-![image](https://github.com/atheeswaran/Scalable-Services/assets/19812046/b357df85-79ec-410d-8e15-d8620ed189a2)
+   Kubectl Options
+   ![image](https://github.com/atheeswaran/Scalable-Services/assets/19812046/56facfac-8ac6-4e82-886d-60038393b812)
+![image](https://github.com/atheeswaran/Scalable-Services/assets/19812046/07e34437-0b47-4b93-9360-75cda8cd0d5c)
+![image](https://github.com/atheeswaran/Scalable-Services/assets/19812046/c8a2fea3-11cf-46d7-9723-480ad6a2a4a2)
+
 
 
 
