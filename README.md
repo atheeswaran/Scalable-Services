@@ -1,6 +1,6 @@
 # Scalable-Services Assignment
 
-**Name: M. ATHEES WARAN => BITS ID: 2022mt93200 (2022mt93200@wilp.bits-pilani.ac.in)**
+**Name: M. ATHEES WARAN => Group 24 => BITS ID: 2022mt93200 (2022mt93200@wilp.bits-pilani.ac.in)**
 
                          **DOCTOR APPOINTMENT Microservices Applcation**
 **Prerequisites:**
