@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-11-08T05:05:20.802Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 Edg/116.0.1938.76" etag="9OtRJ3rSb9zlVwLSTfoG" version="22.0.8" type="github">
+<mxfile host="app.diagrams.net" modified="2023-11-08T05:06:00.509Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 Edg/116.0.1938.76" etag="qjH2BqTTN03MwOKzngof" version="22.0.8" type="github">
   <diagram name="Page-1" id="ZmuFyM6fvtMOjyiI3Wcf">
     <mxGraphModel dx="1407" dy="584" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -12,7 +12,7 @@
         <mxCell id="HS4mzQeZrX7XptLeHZY5-16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.529;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="HS4mzQeZrX7XptLeHZY5-1" target="HS4mzQeZrX7XptLeHZY5-2">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="HS4mzQeZrX7XptLeHZY5-1" value="Front End UI =&amp;gt; &lt;b&gt;&lt;u&gt;AngularJS&lt;/u&gt;&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="HS4mzQeZrX7XptLeHZY5-1" value="Doctor Appointment APP (&lt;b&gt;&lt;u&gt;AngularJS)&lt;/u&gt;&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="335" y="56" width="180" height="60" as="geometry" />
         </mxCell>
         <mxCell id="HS4mzQeZrX7XptLeHZY5-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="HS4mzQeZrX7XptLeHZY5-2" target="HS4mzQeZrX7XptLeHZY5-5">
