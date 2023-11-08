@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-11-08T04:49:55.850Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 Edg/116.0.1938.76" etag="vruTPXorZ7xOKIuI_qEG" version="22.0.8" type="github">
+<mxfile host="app.diagrams.net" modified="2023-11-08T04:50:19.611Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 Edg/116.0.1938.76" etag="lRXHhL5JNhv9CIdNlr78" version="22.0.8" type="github">
   <diagram name="Page-1" id="ZmuFyM6fvtMOjyiI3Wcf">
     <mxGraphModel dx="863" dy="409" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -27,7 +27,7 @@
         <mxCell id="HS4mzQeZrX7XptLeHZY5-23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="HS4mzQeZrX7XptLeHZY5-5" target="HS4mzQeZrX7XptLeHZY5-9">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="HS4mzQeZrX7XptLeHZY5-5" value="Display Doctors" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="HS4mzQeZrX7XptLeHZY5-5" value="Display Doctors (Django App)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="70" y="250" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="HS4mzQeZrX7XptLeHZY5-28" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="HS4mzQeZrX7XptLeHZY5-6" target="HS4mzQeZrX7XptLeHZY5-10">
@@ -75,7 +75,7 @@
         <mxCell id="HS4mzQeZrX7XptLeHZY5-36" value="schedule," style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="600" y="100" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="HS4mzQeZrX7XptLeHZY5-37" value="retrieve notification" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="HS4mzQeZrX7XptLeHZY5-37" value="Retrieve notification" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="660" y="100" width="60" height="30" as="geometry" />
         </mxCell>
       </root>
