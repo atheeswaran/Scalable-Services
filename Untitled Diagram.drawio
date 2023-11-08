@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-11-08T04:54:43.865Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 Edg/116.0.1938.76" etag="jSDq2RujG42lpdK9De_s" version="22.0.8" type="github">
+<mxfile host="app.diagrams.net" modified="2023-11-08T05:04:25.788Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 Edg/116.0.1938.76" etag="DH8QEDfDp9jt5nHVuZZj" version="22.0.8" type="github">
   <diagram name="Page-1" id="ZmuFyM6fvtMOjyiI3Wcf">
     <mxGraphModel dx="1159" dy="481" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -31,7 +31,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="HS4mzQeZrX7XptLeHZY5-5" value="Display Doctors (&lt;b&gt;&lt;u&gt;Django &lt;/u&gt;&lt;/b&gt;App)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="70" y="306" width="120" height="60" as="geometry" />
+          <mxGeometry x="70" y="340" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="HS4mzQeZrX7XptLeHZY5-28" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="HS4mzQeZrX7XptLeHZY5-6" target="HS4mzQeZrX7XptLeHZY5-10">
           <mxGeometry relative="1" as="geometry">
@@ -39,13 +39,13 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="HS4mzQeZrX7XptLeHZY5-6" value="Appointment Scheduling (&lt;b&gt;&lt;u&gt;Django &lt;/u&gt;&lt;/b&gt;App)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="380" y="346" width="120" height="60" as="geometry" />
+          <mxGeometry x="380" y="340" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="HS4mzQeZrX7XptLeHZY5-29" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.615;exitY=0.975;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="HS4mzQeZrX7XptLeHZY5-7" target="HS4mzQeZrX7XptLeHZY5-11">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="HS4mzQeZrX7XptLeHZY5-7" value="Notification (&lt;b&gt;&lt;u&gt;Django&lt;/u&gt;&lt;/b&gt; App)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="670" y="296" width="120" height="60" as="geometry" />
+          <mxGeometry x="670" y="330" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="HS4mzQeZrX7XptLeHZY5-9" value="Doctors DB" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
           <mxGeometry x="90" y="485" width="60" height="80" as="geometry" />
@@ -78,13 +78,31 @@
           <mxGeometry x="660" y="100" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="HS4mzQeZrX7XptLeHZY5-38" value="Displaydoctors," style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="150" y="246" width="60" height="30" as="geometry" />
+          <mxGeometry x="50" y="240" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="HS4mzQeZrX7XptLeHZY5-39" value="schedule," style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="445" y="276" width="60" height="30" as="geometry" />
+          <mxGeometry x="365" y="246" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="HS4mzQeZrX7XptLeHZY5-40" value="Retrieve notification" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="650" y="246" width="60" height="30" as="geometry" />
+          <mxGeometry x="650" y="251" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="HS4mzQeZrX7XptLeHZY5-42" value="REST API" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="150" y="246" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="HS4mzQeZrX7XptLeHZY5-43" value="REST API" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="449" y="246" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="HS4mzQeZrX7XptLeHZY5-44" value="REST API" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="740" y="251" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="HS4mzQeZrX7XptLeHZY5-47" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.91;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="HS4mzQeZrX7XptLeHZY5-45" target="HS4mzQeZrX7XptLeHZY5-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HS4mzQeZrX7XptLeHZY5-45" value="Notification messages (&lt;b&gt;&lt;u&gt;RabbitMQ&lt;/u&gt;&lt;/b&gt;)" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.direct_data;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="519" y="440" width="131" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HS4mzQeZrX7XptLeHZY5-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.08;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="HS4mzQeZrX7XptLeHZY5-6" target="HS4mzQeZrX7XptLeHZY5-45">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
