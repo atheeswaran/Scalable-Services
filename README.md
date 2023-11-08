@@ -1,4 +1,11 @@
 # Scalable-Services
+                         ** DOCTOR APPOINTMENT Microservices Applcation**
+**Prerequisites:**
+**Install Docker:** Make sure you have Docker installed on your system. You can download it from the official Docker website.
+**Install Minikube:** Install Minikube to create a local Kubernetes cluster. You can find the installation instructions on the Minikube GitHub repository.
+**Install kubectl:** Kubectl is the command-line tool for interacting with your Kubernetes cluster. Install it according to the official Kubernetes documentation.
+
+**Detailed Steps:**
 
 1. Create a Microservices based application with at least 3 microservices. Each service should be maintained as a separate code repository so that 
 it can be developed, deployed, and tested independently.
