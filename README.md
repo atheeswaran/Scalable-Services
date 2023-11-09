@@ -2,7 +2,7 @@
 
 **Name: M. ATHEES WARAN => Group 24 => BITS ID: 2022mt93200 (2022mt93200@wilp.bits-pilani.ac.in)**
 
-                         **DOCTOR APPOINTMENT Microservices Applcation**
+                         **HealthCare : Appointment Scheduling microservices App**
 **Prerequisites:**
 
 **Install Docker:** Make sure you have Docker installed on your system. You can download it from the official Docker website.
