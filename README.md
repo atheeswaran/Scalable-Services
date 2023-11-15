@@ -2,7 +2,7 @@
 
 **Name: M. ATHEES WARAN => Group 24 => BITS ID: 2022mt93200 (2022mt93200@wilp.bits-pilani.ac.in)**
 
-**Contribution**: Mostly individual contribution except having the same topic i.e healthcare appointment scheduling app
+**Contribution**: Mostly **individual contribution** except having the same topic i.e healthcare appointment scheduling app
                   with other team members (Bhavani P and Venkat Sairam)
                   
                **HealthCare : Appointment Scheduling microservices App**
@@ -21,12 +21,12 @@
 **Submission details:**
 1) Submit elaborate documentation with group details, contribution by each group member, brief application description, the architecture of 
 your application, steps, and screenshot for each of the above-mentioned tasks. Also, provide a link to the GitHub repositories in the document.
-  => Added below
+  => **Added below**
 2) Create the first demo video to explain your microservices, the database, and communication between the services (for points 1,2, and 3)
-     https://youtu.be/dGDmVa1x7FA (part 1)
+     https://youtu.be/dGDmVa1x7FA (part 1),
      https://youtu.be/cxr2rt4cY90 (part 2)
-3) Create a second demo video to show various deployment options (for points 4 and 5)
-4) Create the third video to show a demo about the minikube task and the Kubernetes cluster on the cloud (for points 6,7, and 8)
+4) Create a second demo video to show various deployment options (for points 4 and 5)
+5) Create the third video to show a demo about the minikube task and the Kubernetes cluster on the cloud (for points 6,7, and 8)
 
 **Code Repos:**
 1. Frontend angular repo => https://github.com/atheeswaran/Scalable-Services/tree/master/appointment-booking-app
@@ -123,29 +123,29 @@ Implemented microservices:
 Below Docker commands are used to deploy each microservice on seperate containers 
 (Refer Dockerfile and requirements.txt in respective GITHubRepo)
 
-1) Database container - mysql:
+**1) Database container - mysql:**
    1) docker exec -it mysql1 bash
    2) mysql -u athish -p
    3) show databases
    4) use registerusersdb
    5) INSERT INTO displaydoctors_doctor (id, name) VALUES (1, 'Dr.Harsha');
 
-2) MQ Container - RabbitMQ:
+**2) MQ Container - RabbitMQ:**
    1) docker run -d --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq
 
-3) Display Doctors container:
+**3) Display Doctors container:**
    1) docker run -d --name mysql1 -e MYSQL_ROOT_PASSWORD=test -e MYSQL_DATABASE=registerusersdb -e MYSQL_USER=athish -e MYSQL_PASSWORD=test -p 3307:3307 mysql:latest
    2) docker build -t athishwaran/display:0.0.1 .
    3) docker exec -it 7be653a929ec python manage.py migrate
    4) docker run -d -p 8000:8000 --link mysql1:mysql athishwaran/display:0.0.1
 
-4) Appointmentscheduling container:
+**4) Appointmentscheduling container:**
    1) docker run -d --name mysql2 -e MYSQL_ROOT_PASSWORD=test -e MYSQL_DATABASE=appointmentdb -e MYSQL_USER=athish -e MYSQL_PASSWORD=test -p 3308:3308 mysql:latest
    2) docker build -t athishwaran/appointment:0.0.3 .
    3) docker run -d -p 8001:8001 --link mysql2:mysql athishwaran/appointment:0.0.2
    4) docker exec -it 5862df6fb4c9 python manage.py migrate
 
-5) Notification container:
+**5) Notification container:**
    1) docker run -d --name mysql3 -e MYSQL_ROOT_PASSWORD=test -e MYSQL_DATABASE=appointmentdb -e MYSQL_USER=athish -e MYSQL_PASSWORD=test -p 3309:3309 mysql:latest
    2) docker build -t athishwaran/notification:0.0.1 .
    3) docker run -d -p 8002:8002 athishwaran/notification:0.0.1
@@ -153,10 +153,44 @@ Below Docker commands are used to deploy each microservice on seperate container
 
 **Step 6.** Run a minikube cluster on your local machine and explore various options in this. Try deployment of your application on this.
    
-   Kubectl Options
+   **Kubectl commands:**
+   kubectl getservices
+   kubectl get pods -A
+   kubectl describe pod xxx
+   kubectl logs <pod>
+   
+ **1) minikube:**
+      minikube start
+      
+ **2) displaydoctors:**
+   kubectl apply -f django\displaydoctors-deploy.yml
+   kubectl apply -f django\displaydoctors-service.yml
+   kubectl apply -f django\job-migration.yaml
+   kubectl exec -it displaydoctors-79bbc646b4-jkjrl -- python manage.py migrate
+   
+ **3) mysql:**
+   kubectl apply -f mysql\deployment.yaml
+   kubectl apply -f mysql\service.yaml
+   kubectl apply -f mysql\config.yaml
+   
+**4) AppointmentScheduling:**
+   kubectl apply -f django\appointment-deploy.yml
+   kubectl apply -f django\appointment-service.yml
+   kubectl apply -f django\job-migration appointment.yaml
+   kubectl exec -it appointment-79bbc63435g-wrert -- python manage.py migrate
+**5) Notification:**
+   kubectl apply -f django\notification-deploy.yml
+   kubectl apply -f django\notification-service.yml
+   kubectl apply -f django\job-migration notification.yaml
+   kubectl exec -it appointment-297erfdffd2-wrfgt -- python manage.py migrate
+
+**6) Minikube:**
+    minikube dashboard
+    
+
    ![image](https://github.com/atheeswaran/Scalable-Services/assets/19812046/56facfac-8ac6-4e82-886d-60038393b812)
-![image](https://github.com/atheeswaran/Scalable-Services/assets/19812046/07e34437-0b47-4b93-9360-75cda8cd0d5c)
-![image](https://github.com/atheeswaran/Scalable-Services/assets/19812046/c8a2fea3-11cf-46d7-9723-480ad6a2a4a2)
+   ![image](https://github.com/atheeswaran/Scalable-Services/assets/19812046/07e34437-0b47-4b93-9360-75cda8cd0d5c)
+   ![image](https://github.com/atheeswaran/Scalable-Services/assets/19812046/c8a2fea3-11cf-46d7-9723-480ad6a2a4a2)
 
 
 
