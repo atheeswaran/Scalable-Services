@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mysql
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mysql-container
+  template:
+    metadata:
+      labels:
+        app: mysql-container
+        tier: backend
+    spec:
+      containers:
+        - name: mysql-container
+          image: mysql:latest
+          envFrom:
+          - configMapRef:
+             name: mysql-config
+          ports:
+            - containerPort: 3306
+          # env:
+            # - name: MYSQL_ROOT_PASSWORD
+            #   value: test
+            # - name: MYSQL_USER
+            #   value: athish
+            # - name: MYSQL_PASSWORD
+            #   value: test
+            # - name: MYSQL_DATABASE
+            #   value: registerusersdb
+            # - name: MYSQL_ALLOW_EMPTY_PASSWORD
+            #   value: "yes"  # Set to "yes" to allow an empty password
+          resources:
+            limits:
+              memory: "512Mi" # Maximum memory limit for the container
+              cpu: "500m"     # Maximum CPU limit for the container (0.5 cores)
+            requests:
+              memory: "256Mi" # Initial memory request for the container
+              cpu: "250m"     # Initial CPU request for the container (0.25 cores)

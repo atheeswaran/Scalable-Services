@@ -1,0 +1,105 @@
+version: '3.9'
+services:
+  maindb:
+    image: mysql:latest
+    restart: always
+    container_name: maindb
+    hostname: maindb
+    environment:
+       #MYSQL_ALLOW_EMPTY_PASSWORD: 'true'
+       MYSQL_ROOT_PASSWORD: test
+       MYSQL_DATABASE: hcdb
+    ports: 
+       - "3306:3306"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    # networks:
+    #   - my-network
+    
+  
+  # registerusersdb:
+  #   image: mysql:latest
+  #   restart: always
+  #   container_name: mysql-registerusers-db
+  #   hostname: mysql-registerusers-db
+  #   environment:
+  #      MYSQL_ROOT_PASSWORD: test1234
+  #      MYSQL_DATABASE: registerusers
+  #   ports:
+  #      - "3307:3307"
+  #   networks:
+  #     - my-network
+
+  # appointmentdb:
+  #   image: mysql:latest
+  #   restart: always
+  #   container_name: mysql-appointment-db
+  #   hostname: mysql-appointment-db
+  #   environment:
+  #      MYSQL_ROOT_PASSWORD: test1234
+  #      MYSQL_DATABASE: appointment
+  #   ports:
+  #      - "3308:3308"
+  #   networks:
+  #     - my-network
+  
+  # notificationdb:
+  #   image: mysql:latest
+  #   restart: always
+  #   container_name: mysql-notification-db
+  #   hostname: mysql-notification-db
+  #   environment:
+  #      MYSQL_ROOT_PASSWORD: test1234
+  #      MYSQL_DATABASE: notification
+  #   ports:
+  #      - "3309:3309"
+  #   networks:
+  #     - my-network
+      
+  registerusers:
+              build:
+                  context: ./RegisterUsers  # Path to the Doctors Service Dockerfile
+                  dockerfile: Dockerfile
+              container_name: registerusers
+              links:
+                - maindb:maindb
+              command: >
+                  bash -c "python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+              depends_on:
+                  -  maindb
+                  # -  appointmentdb
+                  # -  notificationdb
+              ports:
+                   - "10555:8001"  # Doctors service port
+              volumes:
+                   - .:/code
+              restart: always
+              networks:
+                 - my-network
+            
+
+  # # appointmentscheduling:
+  # #                       build:
+  # #                         context: ./AppointmentScheduling  # Path to the Appointment Booking Service Dockerfile
+  # #                         dockerfile: Dockerfile
+  # #                       command:
+  # #                         bash -c "python manage.py runserver 0.0.0.0:8000"
+  # #                       ports:
+  # #                         - "8001:8000"  # Appointments service port
+  # #                       volumes:
+  # #                          - .:/code
+
+  # # notification:
+  # #             build:
+  # #               context: ./Notification  # Path to the Notification Service Dockerfile
+  # #               dockerfile: Dockerfile
+  # #             command:
+  # #                 bash -c "python manage.py runserver 0.0.0.0:8000"
+  # #             ports:
+  # #               - "8002:8000"  # Notifications service port
+  # #             volumes:
+  # #                - .:/code
+
+networks:
+  my-network:
+    driver: bridge
