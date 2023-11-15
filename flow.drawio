@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-11-15T05:47:40.935Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 Edg/116.0.1938.76" etag="uQRWbuuVBVP693oAC5rp" version="22.1.1" type="github">
+<mxfile host="app.diagrams.net" modified="2023-11-15T05:51:46.166Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 Edg/116.0.1938.76" etag="mfrNKRach4_1iaGTwSU7" version="22.1.1" type="github">
   <diagram name="Page-1" id="-DX-BuYwbXiJZP43AESr">
-    <mxGraphModel dx="1013" dy="409" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1447" dy="584" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -77,20 +77,22 @@
         <mxCell id="pXWiy-woDnGJ4gV50viA-20" value="" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;" vertex="1" parent="1">
           <mxGeometry x="770" y="350" width="30" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="pXWiy-woDnGJ4gV50viA-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="pXWiy-woDnGJ4gV50viA-21" target="pXWiy-woDnGJ4gV50viA-20">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="pXWiy-woDnGJ4gV50viA-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="pXWiy-woDnGJ4gV50viA-21">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="785" y="340" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="pXWiy-woDnGJ4gV50viA-21" value="Notification Message (doctor appointment details notified to patient)" style="ellipse;whiteSpace=wrap;html=1;rounded=1;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="548.5" y="530" width="101" height="100" as="geometry" />
+          <mxGeometry x="548.5" y="490" width="101" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="pXWiy-woDnGJ4gV50viA-23" value="&lt;b&gt;MICROSERVICE 1&amp;nbsp; Display doctors&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="pXWiy-woDnGJ4gV50viA-23" value="&lt;b&gt;&lt;u&gt;MICROSERVICE 1&amp;nbsp; Display doctors&lt;/u&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="488.5" y="95" width="121.5" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="pXWiy-woDnGJ4gV50viA-24" value="&lt;b&gt;MICROSERVICE 2&amp;nbsp; Appointment Scheduling&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="357.5" y="342.5" width="121.5" height="40" as="geometry" />
+        <mxCell id="pXWiy-woDnGJ4gV50viA-24" value="&lt;b&gt;&lt;u&gt;MICROSERVICE 2&amp;nbsp; Appointment Scheduling&lt;/u&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="377.5" y="342.5" width="121.5" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="pXWiy-woDnGJ4gV50viA-25" value="&lt;b&gt;MICROSERVICE 3&amp;nbsp; Notification&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="367" y="560" width="121.5" height="40" as="geometry" />
+        <mxCell id="pXWiy-woDnGJ4gV50viA-25" value="&lt;b&gt;&lt;u&gt;MICROSERVICE 3&amp;nbsp; Notification&lt;/u&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="390" y="510" width="121.5" height="40" as="geometry" />
         </mxCell>
         <mxCell id="pXWiy-woDnGJ4gV50viA-26" value="HealthCare : Appointment Scheduling microservices App&#xa;                          FLOW Diagram" style="text;whiteSpace=wrap;fontStyle=1" vertex="1" parent="1">
           <mxGeometry x="218.5" y="10" width="351.5" height="40" as="geometry" />
