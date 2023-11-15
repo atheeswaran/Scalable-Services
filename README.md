@@ -104,30 +104,28 @@ Implemented microservices:
       1) Between appointmentscheduling and notification microservices, RabbitMQ is used to receive the messages.
       2) this ensures there is **NO high coupling** between the services
       3) Start RabbitMQ => docker run -d --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq
-    ![image](https://github.com/atheeswaran/Scalable-Services/assets/19812046/11d72061-e727-469c-8392-86e59d53c814)
-
-      
+    ![image](https://github.com/atheeswaran/Scalable-Services/assets/19812046/11d72061-e727-469c-8392-86e59d53c814)      
 
 **Step 4.** Deploy all services on a single docker container
 1. using Docker-compose.yml - Displaydoctors, appointmentScheduling and notification microservices can be deployed on a single docker container
 2. modify docker file - To run all the services using wrapper script - entrypoint.sh
-   # Start the microservices using the wrapper script
-   CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
-3. call entrypoint.sh - start all the services like below
+   CMD ["/entrypoint.sh"]
+4. call entrypoint.sh - start all the services like below
    python manage.py migrate && python manage.py runserver 0.0.0.0:8000
-4. Run docker-compose build
-5. Run docker-compose up
+5. Run docker-compose build
+6. Run docker-compose up
 
 **Step 5.** Deploy each service on separate docker containers
 
-Below Docker commands are used to deploy each microservice on seperate containers (Refer Dockerfile and requirements.txt in respective GITHubRepo)
+Below Docker commands are used to deploy each microservice on seperate containers 
+(Refer Dockerfile and requirements.txt in respective GITHubRepo)
 
 1) Database container - mysql:
    1) docker exec -it mysql1 bash
    2) mysql -u athish -p
    3) show databases
    4) use registerusersdb
-   5) INSERT INTO displaydoctors_doctor (id, name) VALUES (1, 'athish');
+   5) INSERT INTO displaydoctors_doctor (id, name) VALUES (1, 'Dr.Harsha');
 
 2) MQ Container - RabbitMQ:
    1) docker run -d --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq
@@ -138,16 +136,17 @@ Below Docker commands are used to deploy each microservice on seperate container
    3) docker exec -it 7be653a929ec python manage.py migrate
    4) docker run -d -p 8000:8000 --link mysql1:mysql athishwaran/display:0.0.1
 
-5) Appointmentscheduling container:
-   1) docker run -d --name mysql2 -e MYSQL_ROOT_PASSWORD=test -e MYSQL_DATABASE=appointmentdb -e MYSQL_USER=athish -e MYSQL_PASSWORD=test -p 3308:3308 --network notify mysql:latest
+4) Appointmentscheduling container:
+   1) docker run -d --name mysql2 -e MYSQL_ROOT_PASSWORD=test -e MYSQL_DATABASE=appointmentdb -e MYSQL_USER=athish -e MYSQL_PASSWORD=test -p 3308:3308 mysql:latest
    2) docker build -t athishwaran/appointment:0.0.3 .
    3) docker run -d -p 8001:8001 --link mysql2:mysql athishwaran/appointment:0.0.2
    4) docker exec -it 5862df6fb4c9 python manage.py migrate
 
-4) Notification container:
-   1) docker build -t athishwaran/notification:0.0.1 .
-   2) docker run -d -p 8002:8002 athishwaran/notification:0.0.1
-
+5) Notification container:
+   1) docker run -d --name mysql3 -e MYSQL_ROOT_PASSWORD=test -e MYSQL_DATABASE=appointmentdb -e MYSQL_USER=athish -e MYSQL_PASSWORD=test -p 3309:3309 mysql:latest
+   2) docker build -t athishwaran/notification:0.0.1 .
+   3) docker run -d -p 8002:8002 athishwaran/notification:0.0.1
+   4) docker exec -it 5862df6fc4c9 python manage.py migrate
 
 **Step 6.** Run a minikube cluster on your local machine and explore various options in this. Try deployment of your application on this.
    
