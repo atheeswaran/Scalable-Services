@@ -26,6 +26,7 @@ your application, steps, and screenshot for each of the above-mentioned tasks. A
      https://youtu.be/dGDmVa1x7FA (part 1),
      https://youtu.be/cxr2rt4cY90 (part 2)
 4) Create a second demo video to show various deployment options (for points 4 and 5)
+   https://youtu.be/PQpCGWM4wRk
 5) Create the third video to show a demo about the minikube task and the Kubernetes cluster on the cloud (for points 6,7, and 8)
 
 **Code Repos:**
@@ -110,13 +111,14 @@ Implemented microservices:
     ![image](https://github.com/atheeswaran/Scalable-Services/assets/19812046/11d72061-e727-469c-8392-86e59d53c814)      
 
 **Step 4.** Deploy all services on a single docker container
+
 1. using Docker-compose.yml - Displaydoctors, appointmentScheduling and notification microservices can be deployed on a single docker container
 2. modify docker file - To run all the services using wrapper script - entrypoint.sh
    CMD ["/entrypoint.sh"]
-4. call entrypoint.sh - start all the services like below
+3. call entrypoint.sh - start all the services like below:
    python manage.py migrate && python manage.py runserver 0.0.0.0:8000
-5. Run docker-compose build
-6. Run docker-compose up
+4. Run docker-compose build
+5. Run docker-compose up
 
 **Step 5.** Deploy each service on separate docker containers
 
