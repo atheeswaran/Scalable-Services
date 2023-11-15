@@ -109,6 +109,14 @@ Implemented microservices:
       
 
 **Step 4.** Deploy all services on a single docker container
+1. using Docker-compose.yml - Displaydoctors, appointmentScheduling and notification microservices can be deployed on a single docker container
+2. modify docker file - To run all the services using wrapper script - entrypoint.sh
+   # Start the microservices using the wrapper script
+   CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+3. call entrypoint.sh - start all the services like below
+   python manage.py migrate && python manage.py runserver 0.0.0.0:8000
+4. Run docker-compose build
+5. Run docker-compose up
 
 **Step 5.** Deploy each service on separate docker containers
 
