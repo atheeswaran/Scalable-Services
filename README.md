@@ -18,6 +18,7 @@
 **Code Repos:**
 
 **Important diagrams:**
+
 **Application Architecture:**
 
 ![image](https://github.com/atheeswaran/Scalable-Services/assets/19812046/65ed8d00-a1fd-482a-b17b-dd62e7ee818f)
