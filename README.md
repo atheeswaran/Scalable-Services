@@ -2,7 +2,7 @@
 
 **Name: M. ATHEES WARAN => Group 24 => BITS ID: 2022mt93200 (2022mt93200@wilp.bits-pilani.ac.in)**
 
-                         **HealthCare : Appointment Scheduling microservices App**
+               **HealthCare : Appointment Scheduling microservices App**
 **Prerequisites:**
 
 **Install Docker:** Make sure you have Docker installed on your system. You can download it from the official Docker website.
@@ -16,10 +16,24 @@
 1. Create a Microservices based application with at least 3 microservices. Each service should be maintained as a separate code repository so that 
 it can be developed, deployed, and tested independently.
 
+**Application Description:**
+Appointment Scheduling applicaiton assists patients :
+a) Check Available doctors 
+b) Book appointment with the available doctor with convinient time
+c) Patients are notified with a message (doctor info, appointment time) once appointment is booked successfully.
+
+Implemented microservices:
+1) Display doctors
+2) Scheduling Appointment
+3) Notification
+
+
+
+Application Architecture:
 ![image](https://github.com/atheeswaran/Scalable-Services/assets/19812046/2ad5b1e2-a7cd-4789-9a69-21bfebfbbf66)
 
 
-Description =>
+
 
 2. Use a suitable database and database related pattern for these services
    => Database per service
