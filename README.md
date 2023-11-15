@@ -189,8 +189,11 @@ Below Docker commands are used to deploy each microservice on seperate container
    4) kubectl exec -it appointment-297erfdffd2-wrfgt -- python manage.py migrate
 
 **6) Minikube:**
-    minikube dashboard
-    
+   1) minikube dashboard
+   2) minikube ip => gets ip address
+   3) to access the microservice => run minikube ip: exposed port
+      for instance.,. run http://192.168.49.2:80 for displaydoctors microservice
+   4) do the same for Appointment scheduling and Notification microservices    
 
    ![image](https://github.com/atheeswaran/Scalable-Services/assets/19812046/56facfac-8ac6-4e82-886d-60038393b812)
    ![image](https://github.com/atheeswaran/Scalable-Services/assets/19812046/07e34437-0b47-4b93-9360-75cda8cd0d5c)
