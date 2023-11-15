@@ -150,39 +150,41 @@ Below Docker commands are used to deploy each microservice on seperate container
    2) docker build -t athishwaran/notification:0.0.1 .
    3) docker run -d -p 8002:8002 athishwaran/notification:0.0.1
    4) docker exec -it 5862df6fc4c9 python manage.py migrate
+![image](https://github.com/atheeswaran/Scalable-Services/assets/19812046/0bd33aa3-45a3-456c-abf7-eb9b8e9ffbc2)
 
 **Step 6.** Run a minikube cluster on your local machine and explore various options in this. Try deployment of your application on this.
    
    **Kubectl commands:**
-   kubectl getservices
-   kubectl get pods -A
-   kubectl describe pod xxx
-   kubectl logs <pod>
+   1) kubectl getservices
+   2) kubectl get pods -A
+   3) kubectl describe pod xxx
+   4) kubectl logs <pod>
    
  **1) minikube:**
       minikube start
       
  **2) displaydoctors:**
-   kubectl apply -f django\displaydoctors-deploy.yml
-   kubectl apply -f django\displaydoctors-service.yml
-   kubectl apply -f django\job-migration.yaml
-   kubectl exec -it displaydoctors-79bbc646b4-jkjrl -- python manage.py migrate
+   1) kubectl apply -f django\displaydoctors-deploy.yml
+   2) kubectl apply -f django\displaydoctors-service.yml
+   3) kubectl apply -f django\job-migration.yaml
+   4) kubectl exec -it displaydoctors-79bbc646b4-jkjrl -- python manage.py migrate
    
  **3) mysql:**
-   kubectl apply -f mysql\deployment.yaml
-   kubectl apply -f mysql\service.yaml
-   kubectl apply -f mysql\config.yaml
+   1) kubectl apply -f mysql\deployment.yaml
+   2) kubectl apply -f mysql\service.yaml
+   3) kubectl apply -f mysql\config.yaml
    
 **4) AppointmentScheduling:**
-   kubectl apply -f django\appointment-deploy.yml
-   kubectl apply -f django\appointment-service.yml
-   kubectl apply -f django\job-migration appointment.yaml
-   kubectl exec -it appointment-79bbc63435g-wrert -- python manage.py migrate
+   1) kubectl apply -f django\appointment-deploy.yml
+   2) kubectl apply -f django\appointment-service.yml
+   3) kubectl apply -f django\job-migration appointment.yaml
+   4) kubectl exec -it appointment-79bbc63435g-wrert -- python manage.py migrate
+      
 **5) Notification:**
-   kubectl apply -f django\notification-deploy.yml
-   kubectl apply -f django\notification-service.yml
-   kubectl apply -f django\job-migration notification.yaml
-   kubectl exec -it appointment-297erfdffd2-wrfgt -- python manage.py migrate
+   1) kubectl apply -f django\notification-deploy.yml
+   2) kubectl apply -f django\notification-service.yml
+   3) kubectl apply -f django\job-migration notification.yaml
+   4) kubectl exec -it appointment-297erfdffd2-wrfgt -- python manage.py migrate
 
 **6) Minikube:**
     minikube dashboard
