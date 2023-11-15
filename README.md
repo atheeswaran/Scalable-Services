@@ -18,9 +18,11 @@
 **Submission details:**
 1) Submit elaborate documentation with group details, contribution by each group member, brief application description, the architecture of 
 your application, steps, and screenshot for each of the above-mentioned tasks. Also, provide a link to the GitHub repositories in the document.
+  => Added below
 2) Create the first demo video to explain your microservices, the database, and communication between the services (for points 1,2, and 3)
+     https://youtu.be/dGDmVa1x7FA
 3) Create a second demo video to show various deployment options (for points 4 and 5)
-4) Create the third video to show a demo about the minikube task and the Kubernetes cluster on the cloud (for points 6,7, and 8)
+5) Create the third video to show a demo about the minikube task and the Kubernetes cluster on the cloud (for points 6,7, and 8)
 
 **Code Repos:**
 1. Frontend angular repo => https://github.com/atheeswaran/Scalable-Services/tree/master/appointment-booking-app
