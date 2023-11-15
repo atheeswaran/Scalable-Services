@@ -6,6 +6,22 @@
                   with other team members (Bhavani P and Venkat Sairam)
                   
                **HealthCare : Appointment Scheduling microservices App**
+
+**Youtube Demo Videos:**
+1) Create the first demo video to explain your microservices, the database, and communication between the services (for points 1,2, and 3)
+     https://youtu.be/dGDmVa1x7FA (part 1),
+     https://youtu.be/cxr2rt4cY90 (part 2)
+2) Create a second demo video to show various deployment options (for points 4 and 5)
+   https://youtu.be/PQpCGWM4wRk
+3) Create the third video to show a demo about the minikube task (for points 6)
+   https://youtu.be/0-Ni7Obr25Q
+
+**GitHub Repositories:**
+1. Frontend angular repo => https://github.com/atheeswaran/Scalable-Services/tree/master/appointment-booking-app
+2. Microservice1 => Displaydoctors repo => https://github.com/atheeswaran/Scalable-Services/tree/master/displaydoctors
+3. Microservice2 => appointmentScheduling repo => https://github.com/atheeswaran/Scalable-Services/tree/master/appointmentScheduling
+4. Microservice3 => Notification repo => https://github.com/atheeswaran/Scalable-Services/tree/master/notifyProj
+
 **Prerequisites:**
 
 **Install Django/DRF:** Install Django by using pip install django & pip install djangorestframework.
@@ -17,24 +33,6 @@
 **Install Minikube:** Install Minikube to create a local Kubernetes cluster. You can find the installation instructions on the Minikube GitHub repository.
 
 **Install kubectl:** Kubectl is the command-line tool for interacting with your Kubernetes cluster. Install it according to the official Kubernetes documentation.
-
-**Submission details:**
-1) Submit elaborate documentation with group details, contribution by each group member, brief application description, the architecture of 
-your application, steps, and screenshot for each of the above-mentioned tasks. Also, provide a link to the GitHub repositories in the document.
-  => **Added below**
-2) Create the first demo video to explain your microservices, the database, and communication between the services (for points 1,2, and 3)
-     https://youtu.be/dGDmVa1x7FA (part 1),
-     https://youtu.be/cxr2rt4cY90 (part 2)
-4) Create a second demo video to show various deployment options (for points 4 and 5)
-   https://youtu.be/PQpCGWM4wRk
-5) Create the third video to show a demo about the minikube task (for points 6)
-   https://youtu.be/0-Ni7Obr25Q
-
-**Code Repos:**
-1. Frontend angular repo => https://github.com/atheeswaran/Scalable-Services/tree/master/appointment-booking-app
-2. Microservice1 => Displaydoctors repo => https://github.com/atheeswaran/Scalable-Services/tree/master/displaydoctors
-3. Microservice2 => appointmentScheduling repo => https://github.com/atheeswaran/Scalable-Services/tree/master/appointmentScheduling
-4. Microservice3 => Notification repo => https://github.com/atheeswaran/Scalable-Services/tree/master/notifyProj
 
 **Important diagrams:**
 
