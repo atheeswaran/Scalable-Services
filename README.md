@@ -15,6 +15,21 @@
 
 **Install kubectl:** Kubectl is the command-line tool for interacting with your Kubernetes cluster. Install it according to the official Kubernetes documentation.
 
+**Code Repos:**
+
+**Important diagrams:**
+**Application Architecture:**
+
+![image](https://github.com/atheeswaran/Scalable-Services/assets/19812046/65ed8d00-a1fd-482a-b17b-dd62e7ee818f)
+
+**Application Frontend - 3 micorservices (display/appointment/notification):**
+
+![image](https://github.com/atheeswaran/Scalable-Services/assets/19812046/485654b6-9731-4f74-9a3d-d5a6c4b10bc0)
+
+**HIGH LEVEL FLOW DIAGRAM:**
+
+![image](https://github.com/atheeswaran/Scalable-Services/assets/19812046/81725fd0-cde4-426c-8ef9-ff2f9a8273f0)
+
 **Detailed Steps:**
 
 **Step 1.** Create a Microservices based application with at least 3 microservices. Each service should be maintained as a separate code repository so that it can be developed, deployed, and tested independently.
@@ -33,11 +48,6 @@ Implemented microservices:
 
 => Each Microservice has their own code repo with seperate Databases.
 => Front end is developed in Angular and microservices are developed usign Django REST Framework (DRF)
-
-**Application Architecture:**
-
-
-![image](https://github.com/atheeswaran/Scalable-Services/assets/19812046/2ad5b1e2-a7cd-4789-9a69-21bfebfbbf66)
 
 **Step 2.** Use a suitable database and database related pattern for these services
 
@@ -61,8 +71,9 @@ Implemented microservices:
          => to receive the message from RabbitMQ service once appointment is booked successfully and display to patient
       
    2) **Messaging channel - RabbitMQ**
-      => Between appointmentscheduling and notification microservices, RabbitMQ is used to receive the messages.
-      => this ensures there is **NO high coupling** between the services
+      
+      1) Between appointmentscheduling and notification microservices, RabbitMQ is used to receive the messages.
+      2) this ensures there is **NO high coupling** between the services
       
 
 **Step 4.** Deploy all services on a single docker container
