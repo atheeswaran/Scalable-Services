@@ -83,7 +83,7 @@ DATABASES = {
         'NAME': 'registerusersdb',
         'USER':'athish',
         'PASSWORD':'test',
-        'HOST':'localhost',
+        'HOST':'mysql1',
         #'HOST': 'mysql-service',  # Use the name of your MySQL container
         'PORT': '3306',  # Default MySQL port
     },

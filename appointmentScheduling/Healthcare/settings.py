@@ -98,7 +98,7 @@ DATABASES = {
         'NAME': 'appointmentdb',
         'USER': 'athish',
         'PASSWORD': 'test',
-        'HOST': 'localhost',  # Use the name of your MySQL container
+        'HOST': 'mysql2',  # Use the name of your MySQL container
         'PORT': '3306',  # Default MySQL port
     },   
 

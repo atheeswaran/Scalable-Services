@@ -71,7 +71,7 @@ class BookAppointmentView(APIView):
               # Doctor is available, create the appointment
             ScheduleAppointment.objects.create(doctor_id=doctor_id, doctor_name=doctor_name, appointment_time=appointment_time)
             
-            publish_new_appointment(ScheduleAppointment)
+            #publish_new_appointment(ScheduleAppointment)
             return JsonResponse({'message': 'Appointment created successfully!'})
           
 class AppointmentSchedulingViewSet(viewsets.ModelViewSet):
@@ -79,7 +79,7 @@ class AppointmentSchedulingViewSet(viewsets.ModelViewSet):
     serializer_class=AppointmentSchedulingSerializer
 
 def publish_new_appointment(appointment_data):
-    connection = pika.BlockingConnection(pika.ConnectionParameters(host='localhost'))
+    connection = pika.BlockingConnection(pika.ConnectionParameters(host='rabbitmq'))
     channel = connection.channel()
     appointment_instance = appointment_data.objects.latest('doctor_id')
     # Convert the datetime field to a string using DjangoJSONEncoder

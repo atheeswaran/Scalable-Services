@@ -8,7 +8,7 @@ print('reciever ...')
 
 def receive_rabbitmq_message(request):
     try:
-        connection = pika.BlockingConnection(pika.ConnectionParameters(host='localhost'))
+        connection = pika.BlockingConnection(pika.ConnectionParameters(host='rabbitmq'))
         channel = connection.channel()
 
         while True:
