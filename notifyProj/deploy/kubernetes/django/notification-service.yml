@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: notification-service
+spec:
+  selector:
+    pod: notification
+  ports:
+  - protocol: TCP
+    port: 8000
+    targetPort: 8000
+  type: NodePort

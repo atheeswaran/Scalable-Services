@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: angular-app
+  template:
+    metadata:
+      labels:
+        app: angular-app
+    spec:
+      containers:
+      - name: angular-app
+        image: athishwaran/angular-app:1.0.0  # Use the name of your Angular Docker image
+        ports:
+        - containerPort: 80
+        resources:
+           limits:
+            memory: "256Mi" # Maximum memory limit for the container
+            cpu: "500m"     # Maximum CPU limit for the container (0.5 cores)
+           requests:
+            memory: "128Mi" # Initial memory request for the container
+            cpu: "250m"     # Initial CPU request for the container (0.25 cores)
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend-service
+spec:
+  selector:
+    app: angular-app
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: NodePort  # Use NodePort type to expose the service outside the cluster

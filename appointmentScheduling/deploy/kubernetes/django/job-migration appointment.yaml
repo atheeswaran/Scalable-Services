@@ -1,0 +1,16 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: migration_2
+spec:
+  template:
+    spec:
+      containers:
+        - name: appointment
+          image: athishwaran/appointment-microservice:0.0.2
+          command: ['python', 'manage.py', 'migrate']
+          env:
+          - name: DJANGO_SETTINGS_MODULE
+            value: "Notification.settings"
+      restartPolicy: Never
+  backoffLimit: 1

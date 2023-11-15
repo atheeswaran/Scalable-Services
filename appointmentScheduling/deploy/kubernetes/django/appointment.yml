@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: appointment
+  labels:
+    app: appointment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      pod: appointment
+  template:
+    metadata:
+      labels:
+        pod: appointment
+    spec:
+      containers:
+        - name: appointment
+          image: athishwaran/appointment-microservice:0.0.2
+          ports:
+            - containerPort: 8000
+          resources:
+           limits:
+            memory: "256Mi" # Maximum memory limit for the container
+            cpu: "500m"     # Maximum CPU limit for the container (0.5 cores)
+           requests:
+            memory: "128Mi" # Initial memory request for the container
+            cpu: "250m"     # Initial CPU request for the container (0.25 cores)
+          # env:
+          #   - name: MYSQL_ROOT_PASSWORD
+          #     value: test
+          #   - name: MYSQL_USER
+          #     value: athish
+          #   - name: MYSQL_PASSWORD
+          #     value: athish
+          #   - name: MYSQL_HOST
+          #     value: mysql-service
+
