@@ -16,11 +16,11 @@
 **Install kubectl:** Kubectl is the command-line tool for interacting with your Kubernetes cluster. Install it according to the official Kubernetes documentation.
 
 **Submission details:**
-a) Submit elaborate documentation with group details, contribution by each group member, brief application description, the architecture of 
+1) Submit elaborate documentation with group details, contribution by each group member, brief application description, the architecture of 
 your application, steps, and screenshot for each of the above-mentioned tasks. Also, provide a link to the GitHub repositories in the document.
-b) Create the first demo video to explain your microservices, the database, and communication between the services (for points 1,2, and 3)
-c) Create a second demo video to show various deployment options (for points 4 and 5)
-d) Create the third video to show a demo about the minikube task and the Kubernetes cluster on the cloud (for points 6,7, and 8)
+2) Create the first demo video to explain your microservices, the database, and communication between the services (for points 1,2, and 3)
+3) Create a second demo video to show various deployment options (for points 4 and 5)
+4) Create the third video to show a demo about the minikube task and the Kubernetes cluster on the cloud (for points 6,7, and 8)
 
 **Code Repos:**
 1. Frontend angular repo => https://github.com/atheeswaran/Scalable-Services/tree/master/appointment-booking-app
