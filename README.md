@@ -27,7 +27,8 @@ your application, steps, and screenshot for each of the above-mentioned tasks. A
      https://youtu.be/cxr2rt4cY90 (part 2)
 4) Create a second demo video to show various deployment options (for points 4 and 5)
    https://youtu.be/PQpCGWM4wRk
-5) Create the third video to show a demo about the minikube task and the Kubernetes cluster on the cloud (for points 6,7, and 8)
+5) Create the third video to show a demo about the minikube task (for points 6)
+   https://youtu.be/0-Ni7Obr25Q
 
 **Code Repos:**
 1. Frontend angular repo => https://github.com/atheeswaran/Scalable-Services/tree/master/appointment-booking-app
@@ -187,17 +188,25 @@ Below Docker commands are used to deploy each microservice on seperate container
    2) kubectl apply -f django\notification-service.yml
    3) kubectl apply -f django\job-migration notification.yaml
    4) kubectl exec -it appointment-297erfdffd2-wrfgt -- python manage.py migrate
+ ![image](https://github.com/atheeswaran/Scalable-Services/assets/19812046/56facfac-8ac6-4e82-886d-60038393b812)
 
 **6) Minikube:**
    1) minikube dashboard
    2) minikube ip => gets ip address
    3) to access the microservice => run minikube ip: exposed port
       for instance.,. run http://192.168.49.2:80 for displaydoctors microservice
-   4) do the same for Appointment scheduling and Notification microservices    
-
-   ![image](https://github.com/atheeswaran/Scalable-Services/assets/19812046/56facfac-8ac6-4e82-886d-60038393b812)
+   4) do the same for Appointment scheduling and Notification microservices   
+  
    ![image](https://github.com/atheeswaran/Scalable-Services/assets/19812046/07e34437-0b47-4b93-9360-75cda8cd0d5c)
    ![image](https://github.com/atheeswaran/Scalable-Services/assets/19812046/c8a2fea3-11cf-46d7-9723-480ad6a2a4a2)
+
+**7) Minikube - Scaling option:**
+   1) update replicas to 3 in deployment.yml
+      ![image](https://github.com/atheeswaran/Scalable-Services/assets/19812046/4239e265-795b-45a3-9c34-c4e7f4fc0b82)
+   2) Now run docker ps => you can see 3 "appointment" services are running
+      ![image](https://github.com/atheeswaran/Scalable-Services/assets/19812046/abcce31b-ad01-408c-86ba-8b169c3b706c)
+   3) run minikube dashboard to see 3 pods are running for "appointment" service
+      ![image](https://github.com/atheeswaran/Scalable-Services/assets/19812046/752f1037-f3e1-4880-a7f8-f68ed90c12f6)
 
 
 
