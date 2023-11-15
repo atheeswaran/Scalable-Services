@@ -44,8 +44,19 @@ Appointment Scheduling application assists patients :
 
 Implemented microservices:
 1) Display doctors
+   ![image](https://github.com/atheeswaran/Scalable-Services/assets/19812046/30755776-1f96-4493-8059-35ea1add7c3d)
+   ![image](https://github.com/atheeswaran/Scalable-Services/assets/19812046/d92adc7a-5b1d-4730-85d8-d51c0c89328a)
+   ![image](https://github.com/atheeswaran/Scalable-Services/assets/19812046/c4ef113c-9bae-4f3d-98b4-6a2c0f518593)
 2) Scheduling Appointment
+   ![image](https://github.com/atheeswaran/Scalable-Services/assets/19812046/9881f09b-666e-4761-9edd-6002341d1188)
+   ![image](https://github.com/atheeswaran/Scalable-Services/assets/19812046/e8ba3f20-c5bc-43b7-a363-1617be4ab1fa)
+   ![image](https://github.com/atheeswaran/Scalable-Services/assets/19812046/181d74af-66aa-4970-9054-490b3ad2d33c)   
 3) Notification
+   ![image](https://github.com/atheeswaran/Scalable-Services/assets/19812046/5c05aae9-0d13-4c6f-a1ff-c841c7d501ee)
+   ![image](https://github.com/atheeswaran/Scalable-Services/assets/19812046/ba38c1c5-84c7-456a-92cc-2839e41e8693)
+   ![image](https://github.com/atheeswaran/Scalable-Services/assets/19812046/229c2c6d-5fa5-4ab0-acc9-c19799b09dc9)
+4) Appointmentbookingapp - Frontend angular service:
+   ![image](https://github.com/atheeswaran/Scalable-Services/assets/19812046/35bfc31b-0110-4b2b-9853-0794fb9261a1)
 
 => Each Microservice has their own code repo with seperate Databases.
 => Front end is developed in Angular and microservices are developed usign Django REST Framework (DRF)
@@ -54,10 +65,13 @@ Implemented microservices:
 
    => each microservice (display doctors, appointmentscheduling, notification) uses seperate databases
    1) displaydoctorsdb
+      ![image](https://github.com/atheeswaran/Scalable-Services/assets/19812046/be5a6df3-d9df-40c2-91a7-f20900455616)
    2) appointmentSchedulingdb
+      ![image](https://github.com/atheeswaran/Scalable-Services/assets/19812046/727525c2-7812-4e6c-9601-874316ebae21)
    3) Notificationdb
+      ![image](https://github.com/atheeswaran/Scalable-Services/assets/19812046/7857afd3-38a9-4740-8741-78ee54733577)
   
-   => MySQL Database is used for all three microservices
+   => MySQL Database is used for all three microservices (Check respective settings.py in repo)
    
 **Step 3.** Use a suitable approach for the communication between these services (avoid high coupling between these services)
 
@@ -75,6 +89,9 @@ Implemented microservices:
       
       1) Between appointmentscheduling and notification microservices, RabbitMQ is used to receive the messages.
       2) this ensures there is **NO high coupling** between the services
+      3) Start RabbitMQ => docker run -d --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq
+    ![image](https://github.com/atheeswaran/Scalable-Services/assets/19812046/11d72061-e727-469c-8392-86e59d53c814)
+
       
 
 **Step 4.** Deploy all services on a single docker container
