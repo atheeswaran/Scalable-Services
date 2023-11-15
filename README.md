@@ -16,6 +16,10 @@
 **Install kubectl:** Kubectl is the command-line tool for interacting with your Kubernetes cluster. Install it according to the official Kubernetes documentation.
 
 **Code Repos:**
+1. Frontend angular repo => https://github.com/atheeswaran/Scalable-Services/tree/master/appointment-booking-app
+2. Microservice1 => Displaydoctors repo => https://github.com/atheeswaran/Scalable-Services/tree/master/displaydoctors
+3. Microservice2 => appointmentScheduling repo => https://github.com/atheeswaran/Scalable-Services/tree/master/appointmentScheduling
+4. Microservice3 => Notification repo => https://github.com/atheeswaran/Scalable-Services/tree/master/notifyProj
 
 **Important diagrams:**
 
