@@ -22,9 +22,9 @@
 **Application Description:**
 
 Appointment Scheduling application assists patients :
-a) Check Available doctors
-b) Book appointment with the available doctor with convinient time
-c) Patients are notified with a message (doctor info, appointment time) once appointment is booked successfully.
+1) Check Available doctors
+2) Book appointment with the available doctor with convinient time
+3) Patients are notified with a message (doctor info, appointment time) once appointment is booked successfully.
 
 Implemented microservices:
 1) Display doctors
@@ -35,6 +35,7 @@ Implemented microservices:
 => Front end is developed in Angular and microservices are developed usign Django REST Framework (DRF)
 
 **Application Architecture:**
+
 
 ![image](https://github.com/atheeswaran/Scalable-Services/assets/19812046/2ad5b1e2-a7cd-4789-9a69-21bfebfbbf66)
 
@@ -50,13 +51,14 @@ Implemented microservices:
 **Step 3.** Use a suitable approach for the communication between these services (avoid high coupling between these services)
 
    1) **REST API**
+      
       => From Frontend UI, REST endpoints are used to call below services:
-         a) Displaydoctors => http://localhost:8000/doctors/
-            => to display the available doctors
-         b) Appointment Scheduling => http://localhost:8001/api/book-appointment/
-            => to book the appointment on specified time with selected doctor
-         c) Notification  => http://localhost:8002/receive_rabbitmq_message/
-            => to receive the message from RabbitMQ service once appointment is booked successfully and display to patient
+      1) Displaydoctors => http://localhost:8000/doctors/
+         => to display the available doctors
+      2) Appointment Scheduling => http://localhost:8001/api/book-appointment/
+         => to book the appointment on specified time with selected doctor
+      3) Notification  => http://localhost:8002/receive_rabbitmq_message/
+         => to receive the message from RabbitMQ service once appointment is booked successfully and display to patient
       
    2) **Messaging channel - RabbitMQ**
       => Between appointmentscheduling and notification microservices, RabbitMQ is used to receive the messages.
