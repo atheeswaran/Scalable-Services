@@ -84,30 +84,30 @@ Implemented microservices:
 Below Docker commands are used to deploy each microservice on seperate containers (Refer Dockerfile and requirements.txt in respective GITHubRepo)
 
 1) Database container - mysql:
-   a) docker exec -it mysql1 bash
-   b) mysql -u athish -p
-   c) show databases
-   d) use registerusersdb
-   e) INSERT INTO displaydoctors_doctor (id, name) VALUES (1, 'athish');
+   1) docker exec -it mysql1 bash
+   2) mysql -u athish -p
+   3) show databases
+   4) use registerusersdb
+   5) INSERT INTO displaydoctors_doctor (id, name) VALUES (1, 'athish');
 
 2) MQ Container - RabbitMQ:
-   a) docker run -d --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq
+   1) docker run -d --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq
 
 3) Display Doctors container:
-   a) docker run -d --name mysql1 -e MYSQL_ROOT_PASSWORD=test -e MYSQL_DATABASE=registerusersdb -e MYSQL_USER=athish -e MYSQL_PASSWORD=test -p 3307:3307 mysql:latest
-   b) docker build -t athishwaran/display:0.0.1 .
-   c) docker exec -it 7be653a929ec python manage.py migrate
-   d) docker run -d -p 8000:8000 --link mysql1:mysql athishwaran/display:0.0.1
+   1) docker run -d --name mysql1 -e MYSQL_ROOT_PASSWORD=test -e MYSQL_DATABASE=registerusersdb -e MYSQL_USER=athish -e MYSQL_PASSWORD=test -p 3307:3307 mysql:latest
+   2) docker build -t athishwaran/display:0.0.1 .
+   3) docker exec -it 7be653a929ec python manage.py migrate
+   4) docker run -d -p 8000:8000 --link mysql1:mysql athishwaran/display:0.0.1
 
-4) Appointmentscheduling container:
-   a) docker run -d --name mysql2 -e MYSQL_ROOT_PASSWORD=test -e MYSQL_DATABASE=appointmentdb -e MYSQL_USER=athish -e MYSQL_PASSWORD=test -p 3308:3308 --network notify mysql:latest
-   b) docker build -t athishwaran/appointment:0.0.3 .
-   c) docker run -d -p 8001:8001 --link mysql2:mysql athishwaran/appointment:0.0.2
-   d) docker exec -it 5862df6fb4c9 python manage.py migrate
+5) Appointmentscheduling container:
+   1) docker run -d --name mysql2 -e MYSQL_ROOT_PASSWORD=test -e MYSQL_DATABASE=appointmentdb -e MYSQL_USER=athish -e MYSQL_PASSWORD=test -p 3308:3308 --network notify mysql:latest
+   2) docker build -t athishwaran/appointment:0.0.3 .
+   3) docker run -d -p 8001:8001 --link mysql2:mysql athishwaran/appointment:0.0.2
+   4) docker exec -it 5862df6fb4c9 python manage.py migrate
 
 4) Notification container:
-   a) docker build -t athishwaran/notification:0.0.1 .
-   b) docker run -d -p 8002:8002 athishwaran/notification:0.0.1
+   1) docker build -t athishwaran/notification:0.0.1 .
+   2) docker run -d -p 8002:8002 athishwaran/notification:0.0.1
 
 
 **Step 6.** Run a minikube cluster on your local machine and explore various options in this. Try deployment of your application on this.
