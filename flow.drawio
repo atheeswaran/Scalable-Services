@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-11-15T05:51:46.166Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 Edg/116.0.1938.76" etag="mfrNKRach4_1iaGTwSU7" version="22.1.1" type="github">
+<mxfile host="app.diagrams.net" modified="2023-11-15T05:52:56.903Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 Edg/116.0.1938.76" etag="dYbpigUrChcZxxXCzuUh" version="22.1.1" type="github">
   <diagram name="Page-1" id="-DX-BuYwbXiJZP43AESr">
     <mxGraphModel dx="1447" dy="584" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -65,22 +65,19 @@
         <mxCell id="pXWiy-woDnGJ4gV50viA-16" value="&lt;b&gt;NO&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="649" y="230" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="pXWiy-woDnGJ4gV50viA-19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="pXWiy-woDnGJ4gV50viA-17" target="pXWiy-woDnGJ4gV50viA-18">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
         <mxCell id="pXWiy-woDnGJ4gV50viA-17" value="&lt;b&gt;Display error msg (requested doctor is not available at this time)&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="730" y="240" width="110" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="pXWiy-woDnGJ4gV50viA-18" value="" style="shape=waypoint;sketch=0;size=6;pointerEvents=1;points=[];fillColor=default;resizable=0;rotatable=0;perimeter=centerPerimeter;snapToPoint=1;rounded=1;" vertex="1" parent="1">
-          <mxGeometry x="775" y="342.5" width="20" height="20" as="geometry" />
+        <mxCell id="pXWiy-woDnGJ4gV50viA-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="pXWiy-woDnGJ4gV50viA-17" target="pXWiy-woDnGJ4gV50viA-20">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="785" y="352.5" as="sourcePoint" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="pXWiy-woDnGJ4gV50viA-20" value="" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;" vertex="1" parent="1">
-          <mxGeometry x="770" y="350" width="30" height="30" as="geometry" />
+          <mxGeometry x="770" y="525" width="30" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="pXWiy-woDnGJ4gV50viA-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="pXWiy-woDnGJ4gV50viA-21">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="785" y="340" as="targetPoint" />
-          </mxGeometry>
+        <mxCell id="pXWiy-woDnGJ4gV50viA-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="pXWiy-woDnGJ4gV50viA-21" target="pXWiy-woDnGJ4gV50viA-20">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="pXWiy-woDnGJ4gV50viA-21" value="Notification Message (doctor appointment details notified to patient)" style="ellipse;whiteSpace=wrap;html=1;rounded=1;fontStyle=1" vertex="1" parent="1">
           <mxGeometry x="548.5" y="490" width="101" height="100" as="geometry" />
